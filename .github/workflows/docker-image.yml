@@ -23,6 +23,6 @@ jobs:
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p  {{ secrets.$DOCKERHUB_TOKEN }}
     - uses: actions/checkout@v2
     - name: build image 
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/githubreact:v1
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/springboot:v1
     - name: docker push
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/githubreact:v1
